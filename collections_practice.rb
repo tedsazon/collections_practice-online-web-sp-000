@@ -23,8 +23,8 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
-  array.map do |name|
-    name.sub(name[2], "$")
+  array.each do |name|
+    name[2] = "$"
   end
 end
 
@@ -35,7 +35,7 @@ def find_a(array)
 end
 
 def sum_array(array)
-  array.inject(0, &:+)
+  array.inject(:+)
 end
 
 def add_s(array)
